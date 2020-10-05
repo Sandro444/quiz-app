@@ -12,7 +12,7 @@ const Setup = ({fetchQuestions}) => {
 
     const selectCategory = (e) => {
 
-        let current = state.categories.find(category => category.id === e.target.value )
+        let current = state.categories.find(category => category.id === Number(e.target.value) )
 
         dispatch({type: "set-current-category", payload: current})
 
